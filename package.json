@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/js/index.js"
+    "watch": "nodemon src/js/server.js"
   },
   "repository": {
     "type": "git",
