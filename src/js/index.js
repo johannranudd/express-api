@@ -35,12 +35,12 @@
 // });
 
 // app.post(`/users/:id`, (req, res) => {
-//   //   const { id } = req.params;
-//   //   const { fName } = req.body;
+//   const { id } = req.params;
+//   const { logo } = req.body;
 
-//   //   if (!logo) {
-//   //     res.status(418).send({ message: "No logo was detected" });
-//   //   }
+//   if (!logo) {
+//     res.status(418).send({ message: "No logo was detected" });
+//   }
 
 //   res.send({
 //     user: `blue shirt with ${fName} and ID of ${id}`,
