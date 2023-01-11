@@ -4,15 +4,15 @@ const prisma = new PrismaClient();
 async function main() {
   // const user = await prisma.user.create({
   //   data: {
-  //     email: "test@test.com",
+  //     email: "kari@test.com",
   //     firstName: "kari",
   //     lastName: "nordmann",
   //     password: "myPassword",
   //   },
   // });
   // console.log(user);
-  const users = await prisma.user.findMany();
-  console.log(users);
+  // const users = await prisma.user.findMany();
+  // console.log(users);
   // const users = await prisma.user.deleteMany();
   // console.log(users);
   // const listing = await prisma.listing.create({
@@ -29,6 +29,10 @@ async function main() {
   //   },
   // });
   // console.log(listing);
+  // const listing = await prisma.listing.create({
+  //   data: {
+  //   }
+  // });
 }
 
 main()
