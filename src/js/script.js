@@ -2,10 +2,11 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
+  // await prisma.user.deleteMany();
   // const user = await prisma.user.create({
   //   data: {
-  //     email: "kari@test.com",
-  //     firstName: "kari",
+  //     email: "ola@test.com",
+  //     firstName: "ola",
   //     lastName: "nordmann",
   //     password: "myPassword",
   //   },
@@ -13,26 +14,38 @@ async function main() {
   // console.log(user);
   // const users = await prisma.user.findMany();
   // console.log(users);
-  // const users = await prisma.user.deleteMany();
   // console.log(users);
+  // *listing
   // const listing = await prisma.listing.create({
   //   data: {
-  //     title: "my first listing",
+  //     title: "my second listing",
   //     tags: ["1", "2"],
   //     description: "description",
   //     requirements: ["HTML", "CSS", "JS"],
-  //     deadline: new Date(),
+  //     deadline: new Date(2023, 11, 17),
   //     created: new Date(),
   //     updated: new Date(),
-  //     user: "60fe89e2-6f64-4aaf-885c-177999443e0e",
-  //     userUuid: "60fe89e2-6f64-4aaf-885c-177999443e0e",
+  //     // author: {
+  //     //   connectOrCreate: users.map((user) => ({
+  //     //     where: {
+  //     //       user: "1f916f3b-29cd-443f-bb5f-1edb29c08808",
+  //     //     },
+  //     //     create: {
+  //     //       user: "1f916f3b-29cd-443f-bb5f-1edb29c08808",
+  //     //     },
+  //     //   })),
+  //     // },
+  //     authorId: "1f916f3b-29cd-443f-bb5f-1edb29c08808",
   //   },
   // });
-  // console.log(listing);
-  // const listing = await prisma.listing.create({
-  //   data: {
-  //   }
-  // });
+
+  const listings = await prisma.listing.findUnique({
+    where: {
+      uuid: "358d958b-6b8c-4eec-8252-655acb34310a",
+    },
+  });
+  console.log(listings);
+  // *end listing
 }
 
 main()
