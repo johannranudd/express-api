@@ -1,4 +1,5 @@
-// const express = require("express");
+// import express from "express";
+
 // const app = express();
 // const PORT = 8080;
 
@@ -6,6 +7,6 @@
 
 // app.listen(PORT);
 
-// app.get("/", (req, res) => {
+// app.get("/", async (req, res) => {
 //   res.send({ message: "ello mate!" });
 // });
